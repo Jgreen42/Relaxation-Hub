@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaxation Hub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+
+    <!-- Firebase App (the core Firebase SDK) -->
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+<!-- Firestore -->
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+
+
+    
+    <script src="scripts.js" defer></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/main.js"></script>    
+
+</head>
+<body>
+    <header>
+        <h1>Relaxation Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="#lofi">Lofi Videos</a></li>
+                <li><a href="#relaxing">Relaxing Content</a></li>
+                <li><a href="#engaging">Engaging Activities</a></li>
+                <li><a href="#stress-help">Stress Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lofi">
+            <!-- Lofi Videos Content Here -->
+            <section id="lofi">
+                <h2>Lofi Videos</h2>
+            
+                <!-- Video Input Form -->
+                <div class="video-input">
+                    <input type="text" id="videoUrl" placeholder="Enter YouTube video link">
+                    <input type="text" id="videoDescription" placeholder="Enter video description">
+                    <button onclick="addVideo()">Add Video</button>
+                </div>
+            
+                <div class="video-grid" id="videoGrid">
+                    <!-- Videos will be dynamically added here -->
+                </div>
+            </section>
+            
+            <section id="lofi">
+                <h2>Lofi Videos</h2>
+                <div class="video-grid">
+                    <!-- Video 1 -->
+                    <div class="video-card">
+                        <div class="video-card" onclick="openModal("https://www.youtube.com/embed/tChfZWxRlqE" frameborder="0" allowfullscreen></iframe>
+                        <p>Description or title for Video 1</p>
+                    </div>
+                    <!-- Video 2 -->
+                    <div class="video-card">
+                        <iframe width="400" height="250" src="https://www.youtube.com/embed/xrW4MitN2kw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                    <!-- Add more videos as needed -->
+                </div>
+            </section>
+            
+
+        </section>
+        
+        <section id="relaxing">
+            <!-- Relaxing Content Here -->
+        </section>
+
+        <section id="engaging">
+            <!-- Engaging Activities Here -->
+        </section>
+
+        <section id="stress-help">
+            <!-- Stress Help Resources Here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Relaxation Hub. All rights reserved.</p>
+    </footer>
+
+    <div id="videoModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <iframe class="modal-content" id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- firebase application Start Point -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCzwXhb6arV7bnpNVVrs-M-PSr_ZP7ry-Q",
+          authDomain: "relaxation-hub.firebaseapp.com",
+          projectId: "relaxation-hub",
+          storageBucket: "relaxation-hub.appspot.com",
+          messagingSenderId: "250063019301",
+          appId: "1:250063019301:web:5fc71c726b12d3c777cecc",
+          measurementId: "G-PHCKFW5MXZ"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+
+</body>
+</html>
