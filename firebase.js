@@ -3,7 +3,10 @@ var firebaseConfig = {
     apiKey: "AIzaSyCzwXhb6arV7bnpNVVrs-M-PSr_ZP7ry-Q",
     authDomain: "relaxation-hub.firebaseapp.com",
     projectId: "relaxation-hub",
-    // ... other config details
+    storageBucket: "relaxation-hub.appspot.com",
+    messagingSenderId: "250063019301",
+    appId: "1:250063019301:web:5fc71c726b12d3c777cecc",
+    measurementId: "G-PHCKFW5MXZ"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
